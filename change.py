@@ -17,10 +17,10 @@ file_out.close
 
 change_what = open('change_what.txt', 'r')
 change_to = open('change_to.txt', 'r')
-what = change_what.readline()
-print(what)
-to = change_to.readline()
-print(to)
+what = " " + change_what.readline() + ' '
+#print(what)
+to = " " + change_to.readline() + " "
+#print(to)
 change_word(what, to)
 # change_to.close
 # change_what.close
