@@ -4,7 +4,7 @@ f = open('text_result.txt', 'r')
 tree = ET.parse('beerJournal.xml')
 root = tree.getroot()
 for beer in root.iter('Beer'):
-    beer.text = f.readline()
+   beer.text = "\n" + f.readline()
 tree.write('output.xml')
 
 # def write_xml(file_to_parce, file_to_join):
