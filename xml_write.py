@@ -1,10 +1,22 @@
+
 from logging import root
 import xml.etree.ElementTree as ET
 f = open('text_result.txt', 'r')
 tree = ET.parse('beerJournal.xml')
 root = tree.getroot()
+i = 0
+# for beer in root:
+#    lines = f.readlines()
+#    root[i][0].text = "\n" + lines[i+1]
+#    print(lines[i+1])
+#    i +=1
+
 for beer in root.iter('Beer'):
-   beer.text = "\n" + f.readline()
+   lines = f.readlines()
+   for i in range(0, len(lines)):
+      beer.text= "\n" + lines[i]
+      i+=1
+   
 tree.write('output.xml')
 
 # def write_xml(file_to_parce, file_to_join):
