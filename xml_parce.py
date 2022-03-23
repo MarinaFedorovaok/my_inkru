@@ -2,9 +2,11 @@ import xml.etree.ElementTree as ET
 def parce_xml(file):
     tree = ET.parse(file)
     root = tree.getroot()
-    #print(type(root))
+    #print(root)
     f = open('text.txt', 'w')
+    i = 0
     for child in root:
         #print(child.tag, child.attrib)
-        f.write(root[0][0].text)
+        f.write(root[i][0].text)
+        i +=1
 parce_xml('beerJournal.xml')
