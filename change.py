@@ -6,7 +6,6 @@ def change_word (was, will):
         line = f.readline()
         text = line.replace(was, will)
         file_out.write(text)
-
         # прерываем цикл, если строка пустая
         if not line:
             break
