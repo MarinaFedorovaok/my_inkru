@@ -4,6 +4,7 @@ def parce_xml(file):
     root = tree.getroot()
     #print(root)
     f = open('text.txt', 'w')
+    global i
     i = 0
     for child in root:
         #print(child.tag, child.attrib)

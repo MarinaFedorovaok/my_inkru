@@ -4,18 +4,22 @@ import xml.etree.ElementTree as ET
 f = open('text_result.txt', 'r')
 tree = ET.parse('beerJournal.xml')
 root = tree.getroot()
-i = 0
+
 # for beer in root:
 #    lines = f.readlines()
 #    root[i][0].text = "\n" + lines[i+1]
 #    print(lines[i+1])
 #    i +=1
-
+lines = f.readlines()
+j = 1
 for beer in root.iter('Beer'):
-   lines = f.readlines()
-   for i in range(0, len(lines)):
-      beer.text= "\n" + lines[i]
-      i+=1
+  
+   # #print(len(lines))
+   # for i in range(1, len(lines)):
+   print (len(lines))
+   beer.text= '\n' + lines[j]
+   print(lines[j])
+   j+=2
    
 tree.write('output.xml')
 
