@@ -21,3 +21,5 @@ def parce_xml(file):
 tree = ET.parse('beerJournal.xml')
 root = tree.getroot()
 parce_subtree(root)
+
+#Отличная справка: https://olegmax.readthedocs.io/ru/latest/represents-2.html
