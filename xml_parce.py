@@ -1,7 +1,8 @@
 import xml.etree.ElementTree as ET
 def parce_subtree(root):
     # обрабатываем текующую вершину
-    print(root.tag, ' : ', root.text)
+    if 'tspan' in root.tag and root.text != None:
+        print(root.text)
     for child in root:
         # обрабатываем ее сыновей 
         parce_subtree(child)
@@ -18,7 +19,7 @@ def parce_xml(file):
         f.write(root[i][0].text)
         i +=1
 #parce_xml('beerJournal.xml')
-tree = ET.parse('beerJournal.xml')
+tree = ET.parse('template.svg')
 root = tree.getroot()
 parce_subtree(root)
 
