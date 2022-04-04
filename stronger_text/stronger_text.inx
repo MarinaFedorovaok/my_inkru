@@ -10,6 +10,6 @@
     </effects-menu>
   </effect>
   <script>
-    <command location="inx" interpreter="python">stronger_text.py</command>
+    <command location="inx" interpreter="python3">stronger_text.py</command>
   </script>
 </inkscape-extension>
