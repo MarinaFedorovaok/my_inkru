@@ -1,6 +1,5 @@
 import csv
 from operator import length_hint
-import string
 
 def csv_to_dictionaries (file_csv):
     dictionary = {}
