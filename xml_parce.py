@@ -16,10 +16,6 @@ def parce_subtree(node):
         # обрабатываем ее сыновей 
         parce_subtree(child)
 
-# dictionary = {
-#     "templateText1" : 'Hello',
-#     "templateText2" : 'world'}
-
 file_csv = 'user_file.csv'
 list_dict = csv.csv_to_dictionaries (file_csv)
 #print(list_dict)
