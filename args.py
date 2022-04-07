@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 from argparse import ArgumentParser, FileType
-from re import template
 import xml_parce as xml
-import csv_example as csv
 import xml.etree.ElementTree as ET
 import csv_example as csv
 
